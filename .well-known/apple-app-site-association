@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["669MPL7YX4.Se.maxtalbak.plats"],
+        "components": [
+          { "/": "/b", "comment": "A shared booking: getplats.com/b#d=..." },
+          { "/": "/b/", "comment": "Same, with a trailing slash" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A table for you · Plats</title>
+<meta name="description" content="Someone shared a restaurant booking with you on Plats.">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0F1B26">
+<meta property="og:title" content="A table for you">
+<meta property="og:description" content="Someone shared a restaurant booking with you on Plats.">
+<meta property="og:image" content="https://getplats.com/assets/icon-512.png">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/config.js" defer></script>
+<style>
+  body { background: var(--ink); color: var(--on-ink); min-height: 100vh; }
+  footer { border-top-color: rgba(255,255,255,0.12); color: var(--on-ink-muted); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="bar">
+    <a class="wordmark" href="/">plats<i>.</i></a>
+    <span class="pill">Stockholm</span>
+  </div>
+
+  <div class="ticket-wrap ticket-layout">
+    <!-- Filled in from the link. The booking is in the part after "#", which never reaches this server. -->
+    <article class="ticket" id="ticket" hidden>
+      <div class="ticket-top">
+        <p class="ticket-from" id="from"></p>
+        <h1 id="name"></h1>
+        <p class="when" id="when"></p>
+        <p class="party" id="party"></p>
+        <p class="party" id="address"></p>
+      </div>
+      <div class="ticket-perf"></div>
+      <div class="ticket-actions">
+        <a class="btn primary" id="open-app">Open in Plats</a>
+        <button class="btn" id="calendar" type="button">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4" width="14" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 8h14M7 2.5v3M13 2.5v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          Add to calendar
+        </button>
+        <a class="btn" id="map" target="_blank" rel="noopener">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18s6-5.2 6-10A6 6 0 0 0 4 8c0 4.8 6 10 6 10z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="10" cy="8" r="2.2" fill="currentColor"/></svg>
+          Show on map
+        </a>
+        <p class="ticket-note">The booking is in the name of the person who shared it. To change or cancel it, ask them.</p>
+      </div>
+    </article>
+
+    <article class="ticket" id="broken" hidden>
+      <div class="ticket-top">
+        <p class="ticket-from">Plats</p>
+        <h1>This link is incomplete.</h1>
+        <p class="party">Part of it may have been cut off when it was copied. Ask the person who sent it to share it again.</p>
+      </div>
+    </article>
+
+    <div class="get">
+      <h2>Find your own table.</h2>
+      <p>Plats checks Stockholm's best restaurants for a free table, all at once.</p>
+      <a class="cta" data-get-app aria-disabled="true">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0l-4-4m4 4l4-4M4 17h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-label>Coming soon to iPhone</span>
+      </a>
+      <p class="cta-note" data-get-app-note>Plats is in a closed beta in Stockholm.</p>
+      <p class="cta-note"><a href="/" style="color: var(--mint)">What is Plats?</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Plats · Stockholm</p>
+    <p>This page reads the booking from the link itself. Nothing about it is sent to or stored on getplats.com.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var TZ = "Europe/Stockholm";
+
+  // The app packs the booking as base64url JSON: {v, id, n, a, r, s, e, t, g, st, by}.
+  function readLink() {
+    var hash = location.hash.replace(/^#/, "");
+    var packed = null;
+    hash.split("&").forEach(function (part) { if (part.indexOf("d=") === 0) packed = part.slice(2); });
+    if (!packed) packed = new URLSearchParams(location.search).get("d");
+    if (!packed) return null;
+    try {
+      var b64 = packed.replace(/-/g, "+").replace(/_/g, "/");
+      while (b64.length % 4) b64 += "=";
+      var bytes = Uint8Array.from(atob(b64), function (c) { return c.charCodeAt(0); });
+      var data = JSON.parse(new TextDecoder("utf-8").decode(bytes));
+      if (!data || typeof data.n !== "string" || !data.n || typeof data.s !== "number") return null;
+      return { packed: packed, data: data };
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function fmt(date, options) {
+    return new Intl.DateTimeFormat("en-GB", Object.assign({ timeZone: TZ }, options)).format(date);
+  }
+
+  // A calendar file built here in the browser, the same shape the app makes.
+  function icsFor(b) {
+    function utc(d) { return d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, ""); }
+    function day(d) { return fmt(d, { year: "numeric", month: "2-digit", day: "2-digit" }).split("/").reverse().join(""); }
+    function esc(s) { return String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n"); }
+    var start = new Date(b.s * 1000);
+    var end = new Date((b.e > b.s ? b.e : b.s + 9000) * 1000);
+    var lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Plats//Bookings//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+      "BEGIN:VEVENT", "UID:" + String(b.id || start.getTime()).toLowerCase() + "@getplats.com", "DTSTAMP:" + utc(new Date())];
+    if (b.t) {
+      lines.push("DTSTART:" + utc(start), "DTEND:" + utc(end));
+    } else {
+      var next = new Date(start.getTime() + 86400000);
+      lines.push("DTSTART;VALUE=DATE:" + day(start), "DTEND;VALUE=DATE:" + day(next));
+    }
+    var guests = Math.max(1, b.g | 0);
+    lines.push("SUMMARY:" + esc(b.n + " · " + guests + " guest" + (guests === 1 ? "" : "s")));
+    if (b.a) lines.push("LOCATION:" + esc(b.a + ", Stockholm"));
+    var notes = [];
+    if (b.st) notes.push("Seating: " + b.st);
+    if (b.by) notes.push("Booked by " + b.by);
+    if (notes.length) lines.push("DESCRIPTION:" + esc(notes.join("\n")));
+    lines.push("END:VEVENT", "END:VCALENDAR");
+    return lines.join("\r\n") + "\r\n";
+  }
+
+  // A new link pasted into the same tab only changes the part after "#": read it again.
+  window.addEventListener("hashchange", function () { location.reload(); });
+
+  var link = readLink();
+  if (!link) {
+    document.getElementById("broken").hidden = false;
+    return;
+  }
+  var b = link.data;
+  var start = new Date(b.s * 1000);
+  var guests = Math.max(1, b.g | 0);
+
+  document.title = b.n + " · Plats";
+  document.getElementById("from").textContent = (b.by ? b.by : "Someone") + " booked a table";
+  document.getElementById("name").textContent = b.n;
+  var when = fmt(start, { weekday: "long", day: "numeric", month: "long" });
+  if (b.t) when += " · " + fmt(start, { hour: "2-digit", minute: "2-digit", hour12: false });
+  document.getElementById("when").textContent = when;
+  document.getElementById("party").textContent = guests + " guest" + (guests === 1 ? "" : "s") + (b.st ? " · " + b.st : "");
+
+  var address = document.getElementById("address");
+  var map = document.getElementById("map");
+  if (b.a) {
+    address.textContent = b.a;
+    map.href = "https://maps.apple.com/?q=" + encodeURIComponent(b.n) + "&address=" + encodeURIComponent(b.a + ", Stockholm");
+  } else {
+    address.hidden = true;
+    map.href = "https://maps.apple.com/?q=" + encodeURIComponent(b.n + ", Stockholm");
+  }
+
+  // For people who have Plats but opened the link in a browser: the app's own link opens it directly.
+  document.getElementById("open-app").href = "plats://booking?d=" + link.packed;
+
+  document.getElementById("calendar").addEventListener("click", function () {
+    var blob = new Blob([icsFor(b)], { type: "text/calendar;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = b.n.replace(/[^\p{L}\p{N} ]+/gu, "").trim().replace(/\s+/g, "-") + ".ics";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+  });
+
+  document.getElementById("ticket").hidden = false;
+})();
+</script>
+</body>
+</html>
