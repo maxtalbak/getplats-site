@@ -1,0 +1,19 @@
+[
+ {
+  "name": "Wedholms Fisk",
+  "tier": "listed",
+  "cuisine": "Seafood",
+  "price": "",
+  "address": "Nybrokajen 17, 111 48 Stockholm",
+  "platform": "elyra",
+  "url": "https://widget.elyrasystems.com/wedholms-fisk",
+  "evidence": "direct",
+  "note": "",
+  "website": "https://wedholmsfisk.se/",
+  "area": "Norrmalm",
+  "source": {
+   "system": "elyra",
+   "slug": "wedholms-fisk"
+  }
+ }
+]
