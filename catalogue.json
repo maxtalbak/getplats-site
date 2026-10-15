@@ -1507,5 +1507,41 @@
    "slug": "svartso-krog",
    "hash": "b5d758ed8d46155e924b091423a7323e"
   }
+ },
+ {
+  "name": "Bleck",
+  "tier": "listed",
+  "cuisine": "",
+  "price": "",
+  "address": "Katarina Bangata 68, 116 42 Stockholm",
+  "platform": "bokabord",
+  "url": "https://app.bokabord.se/reservation/?hash=05e9eb7c18204a98dcf79ad1e40369d0",
+  "evidence": "direct",
+  "note": "",
+  "website": "https://restaurangbleck.se/",
+  "area": "Södermalm",
+  "latitude": 59.30957872,
+  "longitude": 18.08719083,
+  "source": {
+   "system": "bokabord",
+   "id": 1606,
+   "slug": "bleck",
+   "hash": "05e9eb7c18204a98dcf79ad1e40369d0"
+  }
+ },
+ {
+  "name": "Ai Ramen Sofia",
+  "tier": "listed",
+  "cuisine": "Japanese",
+  "price": "",
+  "address": "Erstagatan 22, Stockholm",
+  "platform": "unknown",
+  "url": "http://airamen.se/",
+  "evidence": "walkin",
+  "note": "Doesn't take reservations. Walk in.",
+  "website": "http://airamen.se/",
+  "area": "Södermalm",
+  "latitude": 59.3144153,
+  "longitude": 18.0899463000001
  }
 ]
