@@ -1543,5 +1543,46 @@
   "area": "Södermalm",
   "latitude": 59.3144153,
   "longitude": 18.0899463000001
+ },
+ {
+  "name": "Un Poco",
+  "tier": "listed",
+  "cuisine": "Italian",
+  "price": "",
+  "address": "Karlavägen 28, 114 31 Stockholm",
+  "platform": "bokabord",
+  "url": "https://app.bokabord.se/reservation/?hash=1eff43483e2fe01b094d51c8c9ae34ab",
+  "evidence": "direct",
+  "note": "",
+  "area": "Östermalm",
+  "latitude": 59.34096828,
+  "longitude": 18.0696445,
+  "source": {
+   "system": "bokabord",
+   "id": 1770,
+   "slug": "un-poco",
+   "hash": "1eff43483e2fe01b094d51c8c9ae34ab"
+  }
+ },
+ {
+  "name": "Hantverket",
+  "tier": "listed",
+  "cuisine": "Modern Swedish",
+  "price": "",
+  "address": "Sturegatan 15, 114 36 Stockholm",
+  "platform": "bokabord",
+  "url": "https://app.bokabord.se/reservation/?hash=f7f00569986df77ef5d7b4abe98b9bed",
+  "evidence": "direct",
+  "note": "",
+  "website": "https://restauranghantverket.se/",
+  "area": "Östermalm",
+  "latitude": 59.34141657,
+  "longitude": 18.07725131,
+  "source": {
+   "system": "bokabord",
+   "id": 2348,
+   "slug": "restaurang-hantverket",
+   "hash": "f7f00569986df77ef5d7b4abe98b9bed"
+  }
  }
 ]
