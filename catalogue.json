@@ -14,7 +14,9 @@
   "source": {
    "system": "elyra",
    "slug": "wedholms-fisk"
-  }
+  },
+  "menu": "https://wedholmsfisk.se/mat-och-dryck/",
+  "lunchMenu": "https://wedholmsfisk.se/lunchmeny/"
  },
  {
   "name": "Surfers Stockholm",
@@ -33,7 +35,8 @@
    "system": "elyra",
    "slug": "surfers-stockholm"
   },
-  "area": "Norrmalm"
+  "area": "Norrmalm",
+  "menu": "https://surfersstockholm.se/#Meny"
  },
  {
   "name": "Miyakodori",
@@ -52,7 +55,8 @@
    "slug": "miyakodori",
    "hash": "401015e813384cb17bcbdef0ea74a109"
   },
-  "area": "Norrmalm"
+  "area": "Norrmalm",
+  "menu": "https://miyakodori.se/menu/"
  },
  {
   "name": "Café Nizza",
@@ -94,7 +98,8 @@
    "slug": "bistro-sud",
    "hash": "50340ff15b3a0fdbf33cf8f6cdce8ac2"
   },
-  "area": "Södermalm"
+  "area": "Södermalm",
+  "menu": "http://www.bistrosud.com/meny.html"
  },
  {
   "name": "Villa Dagmar",
@@ -115,7 +120,8 @@
    "slug": "villa-dagmar",
    "hash": "a7eea669cf574253557648c3db0db765"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://hotelvilladagmar.com/restaurang-dagmar-stockholm/"
  },
  {
   "name": "Spesso",
@@ -134,7 +140,10 @@
    "system": "elyra",
    "slug": "spesso"
   },
-  "area": "Norrmalm"
+  "area": "Norrmalm",
+  "menu": "https://spesso.se/restaurang/",
+  "lunchMenu": "https://spesso.se/restaurang/lunch/",
+  "dinnerMenu": "https://spesso.se/restaurang/"
  },
  {
   "name": "Tranan",
@@ -218,7 +227,8 @@
    "slug": "lavventura",
    "hash": "bad9dd9d1aa93e4fbad13dc1d235dbc7"
   },
-  "area": "Norrmalm"
+  "area": "Norrmalm",
+  "menu": "https://lavventura.se/menyer/"
  },
  {
   "name": "Brasserie Godot",
@@ -239,7 +249,8 @@
    "slug": "brasserie-godot",
    "hash": "46a66c838f6013039495c3fa7ef03767"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://godot.se/pages/meny"
  },
  {
   "name": "Barobao",
@@ -260,7 +271,8 @@
    "slug": "barobao",
    "hash": "24330efbce4b5e259879c57807e97a95"
   },
-  "area": "Södermalm"
+  "area": "Södermalm",
+  "menu": "https://barobao.se/#menu"
  },
  {
   "name": "Animo",
@@ -344,7 +356,8 @@
    "slug": "brasserie-bobonne",
    "hash": "b529fb237cb8d5e64c73c1faba7e9854"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://bobonne.se/#menyer"
  },
  {
   "name": "Berns Asiatiska",
@@ -365,7 +378,10 @@
    "slug": "berns-asiatiska",
    "hash": "ff69e6dcba324b540b586008aa001aab"
   },
-  "area": "Norrmalm"
+  "area": "Norrmalm",
+  "menu": "https://berns.se/events/menus/",
+  "lunchMenu": "https://berns.se/restaurant/lunch/",
+  "dinnerMenu": "https://berns.se/restaurant/dinner/"
  },
  {
   "name": "Agnes",
@@ -427,7 +443,8 @@
    "slug": "bistro-doma",
    "hash": "9b59fcf5bc8ce25694b0f2053c2d1d6b"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://www.doma.se/matsal/avsmakningsmeny/"
  },
  {
   "name": "Dersch",
@@ -448,7 +465,8 @@
    "slug": "dersch",
    "hash": "12a4a794ab1b31d740c914be4b7efb38"
   },
-  "area": "Vasastan"
+  "area": "Vasastan",
+  "menu": "https://dersch.se/#brxe-mziqsa"
  },
  {
   "name": "Misshumasshu",
@@ -511,7 +529,8 @@
    "slug": "aristo",
    "hash": "664f072f82bfb0a9d22daf7b7bcf9280"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://www.aristokrog.se/meny"
  },
  {
   "name": "Chez Jolie",
@@ -549,7 +568,8 @@
    "system": "elyra",
    "slug": "prinsen"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://www.restaurangprinsen.se/#mat-dryck"
  },
  {
   "name": "Pat´s Place",
@@ -591,7 +611,8 @@
    "slug": "bobergs-matsal",
    "hash": "7d47beb8a6749330f0eb1bb31c47ade6"
   },
-  "area": "Norrmalm"
+  "area": "Norrmalm",
+  "menu": "https://bobergsmatsal.se/meny/"
  },
  {
   "name": "Copine",
@@ -612,7 +633,8 @@
    "slug": "copine",
    "hash": "153ead326f6097aa89a7e5db04760c97"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "dinnerMenu": "https://www.jimjacobrestauranger.se/_files/ugd/526c09_5ff6b48822b345bd9dbaa457ddeb9c81.pdf"
  },
  {
   "name": "Främmat",
@@ -652,7 +674,8 @@
    "system": "elyra",
    "slug": "svartengrens"
   },
-  "area": "Vasastan"
+  "area": "Vasastan",
+  "menu": "https://svartengrens.se/meny"
  },
  {
   "name": "Tjoget",
@@ -672,7 +695,8 @@
    "id": 2798,
    "slug": "tjoget",
    "hash": "51522608c158e7fe676e876936bc78c4"
-  }
+  },
+  "menu": "https://tjoget.com/#dining-room"
  },
  {
   "name": "Indio Kitchen",
@@ -714,7 +738,10 @@
    "slug": "tak",
    "hash": "c8f95b4ad448ead19be05ea2988f4fc6"
   },
-  "area": "Norrmalm"
+  "area": "Norrmalm",
+  "menu": "https://tak.se/ata",
+  "lunchMenu": "https://tak.se/tak-lunch",
+  "dinnerMenu": "https://tak.se/middag"
  },
  {
   "name": "Brasserie Balzac",
@@ -735,7 +762,10 @@
    "slug": "brasserie-balzac",
    "hash": "a0dd019e24669fadaaa6486567307f61"
   },
-  "area": "Vasastan"
+  "area": "Vasastan",
+  "menu": "https://balzac.se/menyer",
+  "lunchMenu": "https://balzac.se/lunch",
+  "dinnerMenu": "https://balzac.se/middag"
  },
  {
   "name": "Den Gyldene Freden",
@@ -756,7 +786,8 @@
    "slug": "den-gyldene-freden",
    "hash": "69a4c23c14e18bccbc8faf0d2c54a213"
   },
-  "area": "Gamla stan"
+  "area": "Gamla stan",
+  "menu": "https://gyldenefreden.se/mat-meny/"
  },
  {
   "name": "Omaka",
@@ -777,7 +808,8 @@
    "slug": "omaka",
    "hash": "b52a4d888cacaa998b1425b3ed972b21"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://omaka.beer/meny"
  },
  {
   "name": "Coco & Carmen",
@@ -798,7 +830,10 @@
    "slug": "coco-carmen",
    "hash": "2e0d18dc6b52271be6ee5289060fc739"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://cococarmen.se/lunch/",
+  "lunchMenu": "https://cococarmen.se/lunch/",
+  "dinnerMenu": "https://cococarmen.se/middag/"
  },
  {
   "name": "La Tour",
@@ -838,7 +873,8 @@
    "slug": "cafe-cuvee",
    "hash": "05b0ee6b56183bcd057bb35e2551eca1"
   },
-  "area": "Södermalm"
+  "area": "Södermalm",
+  "menu": "https://www.cafecuvee.se/meny/"
  },
  {
   "name": "Riche",
@@ -918,7 +954,10 @@
    "system": "elyra",
    "slug": "kb-konstnarsbaren"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://konstnarsbaren.se/menyer/",
+  "lunchMenu": "https://konstnarsbaren.se/brunch/",
+  "dinnerMenu": "https://konstnarsbaren.se/meny-2/"
  },
  {
   "name": "Madam",
@@ -960,7 +999,8 @@
    "slug": "luzette",
    "hash": "e2b9133107e1225157d4ea30e3967d5c"
   },
-  "area": "Norrmalm"
+  "area": "Norrmalm",
+  "menu": "https://luzette.se/meny"
  },
  {
   "name": "Strandvägen 1",
@@ -975,7 +1015,8 @@
   "website": "http://www.strandvagen1.se/",
   "latitude": 59.33270049999999,
   "longitude": 18.076454900000044,
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://strandvagen1.se/#matdryck"
  },
  {
   "name": "Bar Libertin",
@@ -995,7 +1036,8 @@
    "id": 3538,
    "slug": "bar-libertin",
    "hash": "6ee182cc353c64627e68ed592a0bf980"
-  }
+  },
+  "menu": "https://www.barlibertin.se/meny"
  },
  {
   "name": "Villa Skärtofta",
@@ -1036,7 +1078,8 @@
    "slug": "gondolen",
    "hash": "720cdcb4d664ceeebbe8548904e275e6"
   },
-  "area": "Södermalm"
+  "area": "Södermalm",
+  "menu": "https://gondolen.se/meny/"
  },
  {
   "name": "Mäster Anders",
@@ -1057,7 +1100,8 @@
    "slug": "master-anders",
    "hash": "72542cacbec9f1b9f2efbe0eb9321376"
   },
-  "area": "Kungsholmen"
+  "area": "Kungsholmen",
+  "menu": "https://masteranders.se/#menus"
  },
  {
   "name": "RiRi",
@@ -1120,7 +1164,8 @@
    "slug": "schmaltz-bar-delicatessen",
    "hash": "72fad03ab6e73324080d7e8a0260e1d6"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://schmaltz.se/matdryck"
  },
  {
   "name": "Kanon",
@@ -1139,7 +1184,8 @@
    "slug": "kanon",
    "hash": "bf37c7470024fb9844c7c710a9c16140"
   },
-  "area": "Södermalm"
+  "area": "Södermalm",
+  "menu": "https://cdn.sanity.io/files/940zpbqh/production/158ec5e5a55b11b16401ccc53fde55c9ce921c11.pdf"
  },
  {
   "name": "Acaza",
@@ -1175,7 +1221,8 @@
    "slug": "sturehof",
    "hash": "07415d5b4d24177e713964f3bc75eeaf"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "menu": "https://sturehof.com/meny/"
  },
  {
   "name": "Hornsgatan Kvarterskrog",
@@ -1196,7 +1243,10 @@
    "slug": "hornsgatan-kvarterskrog",
    "hash": "2e2544b7a2464b029073643daf6d748e"
   },
-  "area": "Södermalm"
+  "area": "Södermalm",
+  "menu": "https://hornsgatankvarterskrog.com/menyer",
+  "lunchMenu": "https://hornsgatankvarterskrog.com/lunch",
+  "dinnerMenu": "https://hornsgatankvarterskrog.com/middag"
  },
  {
   "name": "Tennstopet",
@@ -1217,7 +1267,8 @@
    "slug": "tennstopet",
    "hash": "48b3bfcf5f5ff2974d516a5bd226850c"
   },
-  "area": "Vasastan"
+  "area": "Vasastan",
+  "menu": "https://tennstopet.se/var-meny"
  },
  {
   "name": "Liebling",
@@ -1257,7 +1308,8 @@
    "slug": "bastardo",
    "hash": "6e28f49927d2c55908c94c8f55b06652"
   },
-  "area": "Vasastan"
+  "area": "Vasastan",
+  "menu": "https://www.bastardosthlm.com/s/MENY-Bastardo-2-kfxf.png"
  },
  {
   "name": "AG",
@@ -1276,7 +1328,8 @@
    "system": "elyra",
    "slug": "ag"
   },
-  "area": "Kungsholmen"
+  "area": "Kungsholmen",
+  "menu": "https://restaurangag.se/menyer"
  },
  {
   "name": "Barbro",
@@ -1297,7 +1350,8 @@
    "slug": "barbro",
    "hash": "159d28c44177302d6e3266ce25442b8b"
   },
-  "area": "Södermalm"
+  "area": "Södermalm",
+  "menu": "https://bar-bro.se/#meny"
  },
  {
   "name": "Las Brasas",
@@ -1318,7 +1372,8 @@
    "slug": "las-brasas",
    "hash": "9840a0c858e8f0637a8f5a91e120b1bc"
   },
-  "area": "Vasastan"
+  "area": "Vasastan",
+  "menu": "https://www.lasbrasas.se/meny/"
  },
  {
   "name": "Rolfs Hav",
@@ -1335,7 +1390,8 @@
    "system": "elyra",
    "slug": "rolfs-hav"
   },
-  "area": "Norrmalm"
+  "area": "Norrmalm",
+  "menu": "https://rolfshav.se/meny"
  },
  {
   "name": "Bockholmen Hav & Restaurang",
@@ -1355,7 +1411,8 @@
    "id": 140,
    "slug": "bockholmen-hav-restaurang",
    "hash": "b7d6145dfc1bca8c57d45324f1f98e71"
-  }
+  },
+  "menu": "https://bockholmen.com/menyer"
  },
  {
   "name": "Sardin",
@@ -1389,7 +1446,8 @@
   "note": "",
   "website": "http://www.monrads.se/",
   "latitude": 59.3975732,
-  "longitude": 18.089614
+  "longitude": 18.089614,
+  "menu": "https://monrads.se/restaurang-norrort/lunch-djursholm/"
  },
  {
   "name": "Matateljén",
@@ -1527,7 +1585,8 @@
    "id": 1606,
    "slug": "bleck",
    "hash": "05e9eb7c18204a98dcf79ad1e40369d0"
-  }
+  },
+  "menu": "https://restaurangbleck.se/meny/"
  },
  {
   "name": "Ai Ramen Sofia",
