@@ -1466,7 +1466,8 @@
    "id": 4558,
    "slug": "matateljen-743f016d0cb3947cde40dc278dfb603b",
    "hash": "743f016d0cb3947cde40dc278dfb603b"
-  }
+  },
+  "website": "https://matateljen.se/"
  },
  {
   "name": "Bar Montan",
@@ -1485,7 +1486,9 @@
    "id": 3868,
    "slug": "bar-montan",
    "hash": "12ca02aa7be2d7abac03ddcdf1eaa4bc"
-  }
+  },
+  "website": "https://barmontan.com/",
+  "menu": "https://barmontan.com/meny/meny.pdf"
  },
  {
   "name": "Bergamott",
@@ -1505,7 +1508,8 @@
    "slug": "restaurang-bergamott",
    "hash": "ab41b80565f520c14f93b98ca126456c"
   },
-  "area": "Kungsholmen"
+  "area": "Kungsholmen",
+  "website": "https://www.restaurangbergamott.se/"
  },
  {
   "name": "Lennart & Bror",
@@ -1525,7 +1529,8 @@
    "slug": "lennart-och-bror",
    "hash": "3fc0451a634f9ef6a60baa1baf26c0bc"
   },
-  "area": "Vasastan"
+  "area": "Vasastan",
+  "website": "https://lennartochbror.se/"
  },
  {
   "name": "Teatergrillen",
@@ -1545,7 +1550,9 @@
    "slug": "teatergrillens-bar",
    "hash": "a9a751cbf9a3721964247c6b364a4fe2"
   },
-  "area": "Östermalm"
+  "area": "Östermalm",
+  "website": "https://www.teatergrillen.se/",
+  "menu": "https://teatergrillen.se/meny/"
  },
  {
   "name": "Svartsö Krog",
@@ -1564,7 +1571,8 @@
    "id": 2800,
    "slug": "svartso-krog",
    "hash": "b5d758ed8d46155e924b091423a7323e"
-  }
+  },
+  "website": "https://www.svartsokrog.se/"
  },
  {
   "name": "Bleck",
@@ -1621,7 +1629,9 @@
    "id": 1770,
    "slug": "un-poco",
    "hash": "1eff43483e2fe01b094d51c8c9ae34ab"
-  }
+  },
+  "website": "https://unpoco.se/",
+  "menu": "https://unpoco.se/#section-menyer"
  },
  {
   "name": "Hantverket",
