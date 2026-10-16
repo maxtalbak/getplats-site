@@ -90,6 +90,11 @@
     hash.split("&").forEach(function (part) { if (part.indexOf("d=") === 0) packed = part.slice(2); });
     if (!packed) packed = new URLSearchParams(location.search).get("d");
     if (!packed) return null;
+    // Copying a booking on iPhone can bring the message text along, which the browser then adds to the link
+    // ("...ZXgifQ%20Coco%20&%20Carmen,..."). The booking itself is only letters, digits, "-" and "_": keep those.
+    var clean = packed.match(/^[A-Za-z0-9_-]+/);
+    if (!clean) return null;
+    packed = clean[0];
     try {
       var b64 = packed.replace(/-/g, "+").replace(/_/g, "/");
       while (b64.length % 4) b64 += "=";
