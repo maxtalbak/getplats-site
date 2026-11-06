@@ -16,7 +16,9 @@
    "slug": "wedholms-fisk"
   },
   "menu": "https://wedholmsfisk.se/mat-och-dryck/",
-  "lunchMenu": "https://wedholmsfisk.se/lunchmeny/"
+  "lunchMenu": "https://wedholmsfisk.se/lunchmeny/",
+  "latitude": 59.328756,
+  "longitude": 18.0799758
  },
  {
   "name": "Surfers Stockholm",
@@ -56,7 +58,9 @@
    "hash": "401015e813384cb17bcbdef0ea74a109"
   },
   "area": "Norrmalm",
-  "menu": "https://miyakodori.se/menu/"
+  "menu": "https://miyakodori.se/menu/",
+  "latitude": 59.3362997,
+  "longitude": 18.0541625
  },
  {
   "name": "Café Nizza",
@@ -1186,7 +1190,9 @@
    "hash": "bf37c7470024fb9844c7c710a9c16140"
   },
   "area": "Södermalm",
-  "menu": "https://cdn.sanity.io/files/940zpbqh/production/158ec5e5a55b11b16401ccc53fde55c9ce921c11.pdf"
+  "menu": "https://cdn.sanity.io/files/940zpbqh/production/158ec5e5a55b11b16401ccc53fde55c9ce921c11.pdf",
+  "latitude": 59.3160233,
+  "longitude": 18.0838281
  },
  {
   "name": "Acaza",
@@ -1392,7 +1398,9 @@
    "slug": "rolfs-hav"
   },
   "area": "Norrmalm",
-  "menu": "https://rolfshav.se/meny"
+  "menu": "https://rolfshav.se/meny",
+  "latitude": 59.3385456,
+  "longitude": 18.0568752
  },
  {
   "name": "Bockholmen Hav & Restaurang",
